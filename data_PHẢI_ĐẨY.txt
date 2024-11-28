@@ -1,0 +1,13 @@
+{
+  "partnerCode": "0912345331",
+  "categoryID": "161",
+  "productID": "",
+  "productAmount": "",
+  "customerID": "",
+  "partnerTransID": "20241129014548773",
+  "partnerTransDate": "20241129014548",
+  "data": "",
+  "otherInfo": "",
+  "dataSign": "Lhny76cL2gs+aq8Og6RrqZC3xhNpWIvFkmzcwj9B94OGAIdc+oNa0SWeaLQAxELtKRX+JpZy0/RE0Z3G96Vp+rLc4RUR78CxzlmXi7OIYOUp96pItAdPrC40Qsr35/m5BhrSvOD16ht1XDfY5zGVV1rGglLSac8nIHXFTiZmCE0=",
+  "url":"https://alpha.vtcpay.vn/share/GetInfo/get-category"
+}

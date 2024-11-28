@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./app.css">
+    <title>SE 9</title>
+    <style>
+        /* h2 {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 16px;
+
+        }
+
+        .network-img>img {
+            width: 75px;
+            height: 35px;
+            object-fit: contain;
+        }
+
+        .amount-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px 10px;
+
+        }
+
+        .header__back {
+            width: 100%;
+            margin-top: 4rem;
+        }
+
+        .back__btn>img,
+        .back__btn {
+            cursor: pointer;
+            width: 3rem;
+            height: 2rem;
+            object-fit: contain;
+        }
+
+        .header__title {
+            margin: 0 auto;
+        }
+
+        .payment-method {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(53, 53, 53, 0.1);
+            padding-top: 15px;
+            padding-bottom: 10px;
+            justify-content: space-around;
+        }
+
+        .online-payment,
+        .scratch-card {
+            padding-bottom: 5px;
+            font-size: 13px;
+            font-weight: 400;
+            color: rgba(134, 141, 175, 1);
+
+        }
+
+        .active__payment {
+            color: red;
+            border-bottom: 2px solid red;
+            border-bottom: 2px solid red;
+        }
+
+        .network-selection>label,
+        .phone-number>label {
+
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 17px;
+            color: rgba(31, 65, 155, 1);
+        }
+
+        .phone-number {
+            width: 100%;
+
+        }
+
+        #network {
+            height: 50px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            border: 1px solid rgba(220, 246, 244, 1);
+            border-radius: 10px;
+        }
+
+        #phone,
+        #amount {
+            padding: 1rem;
+            width: 100%;
+            display: block;
+            border: 1px solid rgba(220, 246, 244, 1);
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .error-message {
+            margin-top: 10px;
+            font-size: 10px;
+            color: rgba(255, 60, 19, 1);
+            display: none;
+        }
+
+        .error {
+            border-radius: 0 !important;
+            border: none !important;
+            background-color: transparent !important;
+            border-bottom: 2px solid red !important;
+        }
+
+
+        .total {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            padding-top: 15px;
+            padding-bottom: 20px;
+
+
+        }
+
+        .end {
+            margin-bottom: 7rem;
+        }
+
+        .total>div>p {
+            font-size: 16px;
+            color: rgba(0, 51, 78, 1);
+        }
+
+        .total>div>span {
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(255, 60, 19, 1);
+            margin-top: 4px;
+        }
+
+        .submit-button {
+            padding: 12px 17px;
+            border-radius: 5px;
+            background-color: rgba(255, 60, 19, 1);
+            color: #fff;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .total__check>div>p {
+            font-size: 14px;
+            color: rgba(31, 65, 155, 1);
+            line-height: 20px;
+        }
+
+        .total__check>div>span {
+            font-size: 16px;
+            font-weight: 600;
+            color: rgba(31, 65, 155, 1);
+            line-height: 20px;
+        }
+
+        .submit-button__check {
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 12px 16px;
+            background-color: rgba(31, 65, 155, 1);
+            border-radius: 5px;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <section class=" header__back d-flex align-items-center  ">
+        <span class="back__btn">
+            <img src="./access/svg/pre.svg" alt="">
+        </span>
+        <div class="header__title">
+            <h2>Nạp điện thoại trả sau</h2>
+        </div>
+    </section>
+
+    <section class="p-14 mt-20">
+        <div class="payment-method d-flex align-items-center  ">
+            <button class="online-payment ">Trả trước</button>
+            <button class="scratch-card  active__payment">Trả Sau</button>
+            <button class="scratch-card ">Mã thẻ điện thoại</button>
+            <button class="scratch-card">Data 3G/4G</button>
+        </div>
+    </section>
+
+
+    <div class="network-selection  p-14 mt-20">
+        <label for="network">Chọn Mạng viễn thông</label>
+        <div>
+            <div id="network" class="my-10 d-flex justify-content-space-between ">
+                <span class="network-img view_netword">
+                    <img src="https://s3-alpha-sig.figma.com/img/9a44/1c1c/c453c5b35c0ac131006cf58d257829fe?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ewwtf4-aoLifhjzYSPbJYTEE41Cnlra1DZXOGuQ89Kwoq-UvT~wDhhG~y6~2fHlKkmaKSEOriOZ8Z3RbIgDSTn-nuDEtVXPibLV54QwZd~eKGkkHkc~G6iYSXP2vgCdLPI9sFNrw2YtDcVng4avYFMF85N0JLwSZirNaqrce1xaCi40SVHMAIxVdmzV8d4pTRuS9s4YvHiUZQoHEu3yGPNlLbbwVDj7dtuBXQb2Xl1px0gIAKthZ4Dl5q3xu392~04zGlxJ-IDKyz-r5muFkPA5fr6MLI2H5WADTxSbXLkq5sKvsTFEjIxNdXw1jKCgZQFwjhVxxe4SE4vujdF2V9Q__"
+                        alt="">
+                </span>
+                <span><img class="arow" src="./access/svg/Arrow.svg" alt=""></span>
+
+            </div>
+            <div class="network_list hide">
+                <span class="network-img">
+                    <img src="https://s3-alpha-sig.figma.com/img/9a44/1c1c/c453c5b35c0ac131006cf58d257829fe?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ewwtf4-aoLifhjzYSPbJYTEE41Cnlra1DZXOGuQ89Kwoq-UvT~wDhhG~y6~2fHlKkmaKSEOriOZ8Z3RbIgDSTn-nuDEtVXPibLV54QwZd~eKGkkHkc~G6iYSXP2vgCdLPI9sFNrw2YtDcVng4avYFMF85N0JLwSZirNaqrce1xaCi40SVHMAIxVdmzV8d4pTRuS9s4YvHiUZQoHEu3yGPNlLbbwVDj7dtuBXQb2Xl1px0gIAKthZ4Dl5q3xu392~04zGlxJ-IDKyz-r5muFkPA5fr6MLI2H5WADTxSbXLkq5sKvsTFEjIxNdXw1jKCgZQFwjhVxxe4SE4vujdF2V9Q__"
+                        alt="">
+                </span>
+                <span class="network-img">
+                    <img src="data:image/png;base64,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"
+                        alt="">
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="phone-number p-14 mt-20 ">
+        <label for="phone">Nạp tiền cho số điện thoại</label>
+        <br>
+        <input type="text" id="phone" class="my-10" placeholder="Nhập số điện thoại">
+        <p id="phone-error" class="error-message">Số điện thoại không đúng định
+            dạng</p>
+    </div>
+
+    <section class="p-14 mt-20">
+        <div class="total__check p-14  d-flex  justify-content-space-between  align-items-center">
+            <div>
+                <p>Số tiền thanh toán </p>
+                <span class="total-amount__check" id="total-amount">100,000 VND</span>
+            </div>
+            <button class="submit-button__check  " onclick="alert('Tra cuu')">Tra cứu</button>
+        </div>
+    </section>
+
+
+    <section class=" mt-20">
+
+        <div class="total p-14  d-flex  justify-content-space-between  align-items-center">
+            <div>
+                <p>Số tiền thanh toán </p>
+                <span class="total-amount" id="total-amount">20,000 VND</span>
+            </div>
+            <button class="submit-button  " onclick="check()">Nạp Tiền</button>
+        </div>
+    </section>
+
+    <div class="end"></div>
+
+
+</body>
+
+<script>
+
+
+    const network = document.getElementById("network");
+    const arrow = document.querySelector(".arow");
+    const listNetwork = document.querySelector(".network_list");
+
+    network.addEventListener("click", () => {
+        listNetwork.classList.toggle("hide");
+        arrow.style.transform = listNetwork.classList.contains("hide")
+            ? "rotate(180deg)"
+            : "rotate(360deg)";
+    });
+
+
+    document.querySelectorAll(".network-img").forEach((value, index, array) => {
+        value.addEventListener('click', () => {
+            const src = value.querySelector("img").src
+            // console.log(src)
+            const view_netword = document.querySelector(".view_netword").querySelector('img').src = src
+            const list_neword = document.querySelector(".network_list").classList.toggle('hide')
+            arrow.style.transform = listNetwork.classList.contains("hide")
+                ? "rotate(180deg)"
+                : "rotate(360deg)";
+        })
+    })
+    document.getElementById("phone").addEventListener("change", () => {
+        const phoneInput = document.getElementById("phone");
+        const phoneError = document.getElementById("phone-error");
+        const check = validatePhoneNumber();
+        console.log(check)
+        if (check === false) {
+            phoneError.style.display = "block";
+            phoneInput.classList.add("error");
+            return false
+        } else {
+            phoneError.style.display = "none";
+            phoneInput.classList.remove("error");
+            console.log("Phone number is valid:", phoneInput.value);
+        }
+    });
+
+
+    function validatePhoneNumber() {
+        const phoneInput = document.getElementById("phone");
+        const phoneError = document.getElementById("phone-error");
+        const phoneRegex = /^0[1-9]\d{8}$/;
+        return phoneRegex.test(phoneInput.value)
+    }
+    function check() {
+        const phoneInput = document.getElementById("phone");
+        const phoneError = document.getElementById("phone-error");
+        const check = validatePhoneNumber();
+        console.log(check)
+        if (check === false) {
+            phoneError.style.display = "block";
+            phoneInput.classList.add("error");
+            return false
+        } else {
+            phoneError.style.display = "none";
+            phoneInput.classList.remove("error");
+            console.log("Phone number is valid:", phoneInput.value);
+        }
+
+
+
+        alert(`Phone: ${phone.value} `);
+    }
+
+
+</script>
+
+</html>
